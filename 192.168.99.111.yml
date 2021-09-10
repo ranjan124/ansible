@@ -1,0 +1,2 @@
+ansible_user=worker1
+apache_package=apache2
