@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name: cleanup apache and php
+      package:
+        name: "{{ apache_package }}"
+        state: absent
+        autoremove: true
+        purge: true
+        autoclean: true
+        update_cache: yes

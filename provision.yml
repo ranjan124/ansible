@@ -3,7 +3,8 @@
 - hosts: all
   become: true
   tasks:
-  - name: install apache and php
-    package:
-      name: "{{ apache_package }}"
-      update_cache: yes
+    - name: install apache and php
+      package:
+        name: "{{ apache_package }}"
+        state: latest
+        update_cache: yes
